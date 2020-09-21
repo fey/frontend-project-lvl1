@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import promptly from 'promptly';
 
 export default async () => {
