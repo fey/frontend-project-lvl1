@@ -1,0 +1,31 @@
+{
+  "name": "frontend-project-lvl1",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Brain Games is bundle of mini-games with command-line interface",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fey/frontend-project-lvl1.git"
+  },
+  "keywords": [
+    "hexlet",
+    "brain-games",
+    "cli",
+    "project"
+  ],
+  "author": "feycot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fey/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/fey/frontend-project-lvl1#readme",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}
