@@ -1,5 +1,10 @@
+/* eslint-disable no-console */
 import promptly from 'promptly';
 
-export const greeting = async () => {
-  const name = await promptly.promt('Your answer: ');
+export default async () => {
+  console.log('Welcome to Brain Games!');
+
+  const name = await promptly.prompt('May I have your name?');
+
+  console.log(`Hello, ${name}!`);
 };
