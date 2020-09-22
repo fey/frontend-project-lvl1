@@ -20,5 +20,12 @@ https://asciinema.org/a/0QKIep1graYMqpyrDbUq7EfiE
 
 ## Calc
 ```sh
-$ npx brain-calc```
+$ npx brain-calc
+```
 https://asciinema.org/a/kJYw4gd0pyyRtZhkKNLeP6uA2
+
+## GCD
+```sh
+$ npx brain-calc
+```
+https://asciinema.org/a/L1Z2KGuJBDkvUb1Tp0j56oO8Y
