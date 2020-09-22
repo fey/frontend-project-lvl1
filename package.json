@@ -22,7 +22,8 @@
   "homepage": "https://github.com/fey/frontend-project-lvl1#readme",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js"
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js"
   },
   "devDependencies": {
     "eslint": "^7.9.0",

@@ -17,3 +17,8 @@ Run
 $ npx brain-even
 ```
 https://asciinema.org/a/0QKIep1graYMqpyrDbUq7EfiE
+
+## Calc
+```sh
+$ npx brain-calc```
+https://asciinema.org/a/kJYw4gd0pyyRtZhkKNLeP6uA2
