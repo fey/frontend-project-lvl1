@@ -7,8 +7,8 @@ const play = async (name) => {
   const maxRandomNumber = 50;
 
   for (let i = 1; i <= 3; i += 1) {
-    const number1 = generateRandomInt(maxRandomNumber);
-    const number2 = generateRandomInt(maxRandomNumber);
+    const number1 = generateRandomInt(1, 30);
+    const number2 = generateRandomInt(1, 30);
     const correctAnswer = gcd(number1, number2).toString();
 
     console.log(`Question: ${number1} ${number2}`);

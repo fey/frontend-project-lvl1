@@ -18,11 +18,10 @@ const calculate = (operator, num1, num2) => {
 const play = async (name) => {
   const isEven = (num) => num % 2 === 0;
   console.log('What is the result of the expression?');
-  const maxRandomNumber = 10;
 
   for (let i = 1; i <= 3; i += 1) {
-    const number1 = generateRandomInt(maxRandomNumber);
-    const number2 = generateRandomInt(maxRandomNumber);
+    const number1 = generateRandomInt(1, 10);
+    const number2 = generateRandomInt(1, 10);
     const operator = getRandomElement(['+', '-', '*']);
 
     const correctAnswer = calculate(operator, number1, number2).toString();

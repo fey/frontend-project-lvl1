@@ -7,7 +7,7 @@ const play = async (name) => {
   const maxRandomNumber = 10;
 
   for (let i = 1; i <= 3; i += 1) {
-    const number = generateRandomInt(maxRandomNumber);
+    const number = generateRandomInt(1, 20);
     const correctAnswer = isEven(number) ? 'yes' : 'no';
 
     console.log(`Question: ${number}`);
