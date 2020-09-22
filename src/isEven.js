@@ -22,7 +22,7 @@ const play = async (name) => {
     console.log('Correct!');
   }
 
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}`!);
 };
 
 export default async () => {
