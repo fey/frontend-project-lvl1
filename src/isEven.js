@@ -25,4 +25,12 @@ const play = async (name) => {
   console.log(`Congratulations, ${name}`);
 };
 
-export default play;
+export default async () => {
+  console.log('Welcome to Brain Games!');
+
+  const name = await promptly.prompt('May I have your name?');
+
+  console.log(`Hello, ${name}!`);
+
+  play(name);
+};
