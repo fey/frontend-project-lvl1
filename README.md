@@ -29,3 +29,10 @@ https://asciinema.org/a/kJYw4gd0pyyRtZhkKNLeP6uA2
 $ npx brain-calc
 ```
 https://asciinema.org/a/L1Z2KGuJBDkvUb1Tp0j56oO8Y
+
+## Progression
+```sh
+$ npx brain-progression
+```
+https://asciinema.org/a/QEKyY6t3Sydr4kNzAW8MfcGIy
+
