@@ -36,3 +36,8 @@ $ npx brain-progression
 ```
 https://asciinema.org/a/QEKyY6t3Sydr4kNzAW8MfcGIy
 
+## Prime
+```sh
+$ npx brain-prime
+```
+https://asciinema.org/a/sLp9QoUR7x15Lws0n9VO0kM4i
