@@ -4,7 +4,6 @@ import { generateRandomInt } from '../utils.js';
 const play = async (name) => {
   const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
   console.log('Find the greatest common divisor of given numbers.');
-  const maxRandomNumber = 50;
 
   for (let i = 1; i <= 3; i += 1) {
     const number1 = generateRandomInt(1, 30);

@@ -1,5 +1,5 @@
 import promptly from 'promptly';
-import { generateRandomInt, getRandomElement } from './utils.js';
+import { generateRandomInt, getRandomElement } from '../utils.js';
 
 const calculate = (operator, num1, num2) => {
   switch (operator) {
@@ -16,7 +16,6 @@ const calculate = (operator, num1, num2) => {
 };
 
 const play = async (name) => {
-  const isEven = (num) => num % 2 === 0;
   console.log('What is the result of the expression?');
 
   for (let i = 1; i <= 3; i += 1) {
