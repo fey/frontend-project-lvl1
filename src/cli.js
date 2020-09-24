@@ -28,7 +28,7 @@ export default async (description, game) => {
 
     console.log('Correct!');
     iter(roundsLeft - 1);
-  }
+  };
 
   iter(3);
 };
