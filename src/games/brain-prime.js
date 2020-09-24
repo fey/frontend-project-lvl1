@@ -1,4 +1,3 @@
-import promptly from 'promptly';
 import { generateRandomInt } from '../utils.js';
 
 const isPrime = (num) => {
@@ -9,34 +8,12 @@ const isPrime = (num) => {
   }
   return num > 1;
 };
-const play = async (name) => {
-  console.log('Answer "yes" if the number is prime, otherwise answer "no".');
 
-  for (let i = 1; i <= 3; i += 1) {
-    const number = generateRandomInt(1, 23);
-    const correctAnswer = isPrime(number) ? 'yes' : 'no';
+export const description = 'Answer "yes" if the number is prime, otherwise answer "no".';
+export const game = () => {
+  const number = generateRandomInt(1, 23);
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
+  const question = number.toString();
 
-    console.log(`Question: ${number}`);
-    const playerAnswer = await promptly.prompt('Your answer: ');
-
-    if (playerAnswer !== correctAnswer) {
-      console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}"`);
-      console.log(`Let's try again, ${name}!`);
-
-      return;
-    }
-    console.log('Correct!');
-  }
-
-  console.log(`Congratulations, ${name}!`);
+  return { correctAnswer, question };
 };
-
-export default async () => {
-  console.log('Welcome to Brain Games!');
-
-  const name = await promptly.prompt('May I have your name?');
-
-  console.log(`Hello, ${name}!`);
-
-  play(name);
-}

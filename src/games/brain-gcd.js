@@ -1,36 +1,12 @@
-import promptly from 'promptly';
 import { generateRandomInt } from '../utils.js';
 
-const play = async (name) => {
+export const description = 'Find the greatest common divisor of given numbers.';
+export const game = () => {
   const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
-  console.log('Find the greatest common divisor of given numbers.');
+  const number1 = generateRandomInt(1, 30);
+  const number2 = generateRandomInt(1, 30);
+  const correctAnswer = gcd(number1, number2).toString();
+  const question = `${number1} ${number2}`;
 
-  for (let i = 1; i <= 3; i += 1) {
-    const number1 = generateRandomInt(1, 30);
-    const number2 = generateRandomInt(1, 30);
-    const correctAnswer = gcd(number1, number2).toString();
-
-    console.log(`Question: ${number1} ${number2}`);
-    const playerAnswer = await promptly.prompt('Your answer: ');
-
-    if (playerAnswer !== correctAnswer) {
-      console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}"`);
-      console.log(`Let's try again, ${name}!`);
-
-      return;
-    }
-    console.log('Correct!');
-  }
-
-  console.log(`Congratulations, ${name}!`);
-};
-
-export default async () => {
-  console.log('Welcome to Brain Games!');
-
-  const name = await promptly.prompt('May I have your name?');
-
-  console.log(`Hello, ${name}!`);
-
-  play(name);
+  return { correctAnswer, question };
 };

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import gcd from '../src/games/brain-gcd.js';
+import { description, game } from '../src/games/brain-gcd.js';
+import playCli from '../src/cli.js';
 
-gcd();
+playCli(description, game);
