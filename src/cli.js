@@ -8,7 +8,12 @@ export default async (description, game) => {
   console.log(`Hello, ${name}!`);
   console.log(description);
 
-  for (let i = 1; i <= 3; i += 1) {
+  const iter = async (roundsLeft) => {
+    if (roundsLeft === 0) {
+      console.log(`Congratulations, ${name}!`);
+      return;
+    }
+
     const { correctAnswer, question } = game();
 
     console.log(`Question: ${question}`);
@@ -20,8 +25,10 @@ export default async (description, game) => {
 
       return;
     }
+
     console.log('Correct!');
+    iter(roundsLeft - 1);
   }
 
-  console.log(`Congratulations, ${name}!`);
+  iter(3);
 };
