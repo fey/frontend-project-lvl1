@@ -1,12 +1,17 @@
 import { generateRandomInt } from '../utils.js';
 
 const isPrime = (num) => {
+  if (num < 1) {
+    return false;
+  }
+
   for (let i = 2; i <= Math.sqrt(num); i += 1) {
     if (num % i === 0) {
       return false;
     }
   }
-  return num > 1;
+
+  return true;
 };
 
 const description = 'Answer "yes" if the number is prime, otherwise answer "no".';

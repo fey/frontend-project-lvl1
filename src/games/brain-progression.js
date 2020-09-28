@@ -2,17 +2,21 @@ import { generateRandomInt } from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 const startNewGame = () => {
-  const firstProgressionNumber = generateRandomInt(1, 50);
+  const makeProgression = (startValue, step, length) => (new Array(length))
+    .fill(startValue, 0, 10)
+    .map((element, currentIndex) => (element + step * currentIndex));
+
+  const progressionStart = generateRandomInt(1, 50);
   const hiddenElementIndex = generateRandomInt(0, 9);
-  const progressionIncrementValue = generateRandomInt(1, 5);
-  const progression = (new Array(10)).fill(firstProgressionNumber, 0, 10)
-    .map((element, currentIndex) => (element + progressionIncrementValue * currentIndex));
+  const progressionStep = generateRandomInt(1, 5);
+  const progressionLength = 10;
+
+  const progression = makeProgression(progressionStart, progressionStep, progressionLength);
 
   const correctAnswer = progression[hiddenElementIndex].toString();
-  const question = progression
-    .slice(0, hiddenElementIndex).concat('..')
-    .concat(progression.slice(hiddenElementIndex + 1))
-    .join(' ');
+
+  progression[hiddenElementIndex] = '..';
+  const question = progression.join(' ');
 
   return { correctAnswer, question };
 };
