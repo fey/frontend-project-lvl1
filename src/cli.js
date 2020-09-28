@@ -5,7 +5,7 @@ export default async (game) => {
   const roundsCount = 3;
 
   const name = await promptly.prompt('May I have your name?');
-  const {description, startNewGame} = game;
+  const { description, startNewGame } = game;
 
   console.log(`Hello, ${name}!`);
   console.log(description);

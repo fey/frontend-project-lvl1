@@ -1,8 +1,6 @@
 name: CI
 on:
   - push
-env:
-  PROJECT_IMAGE: hexletprojects/js_l1_brain_games4_project
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,11 +9,6 @@ jobs:
         node-version: [14.x]
     steps:
       - uses: actions/checkout@v2
-
-      - name: Hexlet project check
-        uses: hexlet/project-action@release
-        with:
-          project_image: ${{ env.PROJECT_IMAGE }}
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
