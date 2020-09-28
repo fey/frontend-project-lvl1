@@ -9,11 +9,13 @@ const isPrime = (num) => {
   return num > 1;
 };
 
-export const description = 'Answer "yes" if the number is prime, otherwise answer "no".';
-export const game = () => {
+const description = 'Answer "yes" if the number is prime, otherwise answer "no".';
+const startNewGame = () => {
   const number = generateRandomInt(1, 23);
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   const question = number.toString();
 
   return { correctAnswer, question };
 };
+
+export default { description, startNewGame };

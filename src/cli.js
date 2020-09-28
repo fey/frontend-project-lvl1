@@ -1,9 +1,11 @@
 import promptly from 'promptly';
 
-export default async (description, game) => {
+export default async (game) => {
   console.log('Welcome to Brain Games!');
+  const roundsCount = 3;
 
   const name = await promptly.prompt('May I have your name?');
+  const {description, startNewGame} = game;
 
   console.log(`Hello, ${name}!`);
   console.log(description);
@@ -14,7 +16,7 @@ export default async (description, game) => {
       return;
     }
 
-    const { correctAnswer, question } = game();
+    const { correctAnswer, question } = startNewGame();
 
     console.log(`Question: ${question}`);
     const playerAnswer = await promptly.prompt('Your answer: ');
@@ -30,5 +32,5 @@ export default async (description, game) => {
     iter(roundsLeft - 1);
   };
 
-  iter(3);
+  iter(roundsCount);
 };

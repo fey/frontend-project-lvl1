@@ -1,7 +1,7 @@
 import { generateRandomInt } from '../utils.js';
 
-export const description = 'What number is missing in the progression?';
-export const game = () => {
+const description = 'What number is missing in the progression?';
+const startNewGame = () => {
   const firstProgressionNumber = generateRandomInt(1, 50);
   const hiddenElementIndex = generateRandomInt(0, 9);
   const progressionIncrementValue = generateRandomInt(1, 5);
@@ -16,3 +16,5 @@ export const game = () => {
 
   return { correctAnswer, question };
 };
+
+export default { description, startNewGame };
