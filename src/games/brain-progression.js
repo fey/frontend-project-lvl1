@@ -3,13 +3,13 @@ import { generateRandomInt } from '../utils.js';
 const description = 'What number is missing in the progression?';
 const startNewGame = () => {
   const makeProgression = (startValue, step, length) => (new Array(length))
-    .fill(startValue, 0, 10)
+    .fill(startValue)
     .map((element, currentIndex) => (element + step * currentIndex));
 
   const progressionStart = generateRandomInt(1, 50);
-  const hiddenElementIndex = generateRandomInt(0, 9);
-  const progressionStep = generateRandomInt(1, 5);
   const progressionLength = 10;
+  const hiddenElementIndex = generateRandomInt(0, progressionLength - 1);
+  const progressionStep = generateRandomInt(1, 5);
 
   const progression = makeProgression(progressionStart, progressionStep, progressionLength);
 
