@@ -13,8 +13,8 @@ const calculate = (operator, num1, num2) => {
   }
 };
 
-export const description = 'What is the result of the expression?';
-export const startNewGame = () => {
+const description = 'What is the result of the expression?';
+const makeGame = () => {
   const number1 = generateRandomInt(1, 10);
   const number2 = generateRandomInt(1, 10);
   const operator = getRandomElement(['+', '-', '*']);
@@ -26,4 +26,4 @@ export const startNewGame = () => {
   return { correctAnswer, question };
 };
 
-export default { description, startNewGame };
+export default { description, makeGame };
