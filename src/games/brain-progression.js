@@ -5,7 +5,7 @@ const makeProgression = (startValue, step, length) => (new Array(length))
   .map((element, currentIndex) => (element + step * currentIndex));
 
 const description = 'What number is missing in the progression?';
-const makeGame = () => {
+const makeRound = () => {
   const progressionStart = generateRandomInt(1, 50);
   const progressionLength = 10;
   const hiddenElementIndex = generateRandomInt(0, progressionLength - 1);
@@ -21,4 +21,4 @@ const makeGame = () => {
   return { correctAnswer, question };
 };
 
-export default { description, makeGame };
+export default { description, makeRound };

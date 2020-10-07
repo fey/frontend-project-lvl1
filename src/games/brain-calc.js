@@ -14,7 +14,7 @@ const calculate = (operator, num1, num2) => {
 };
 
 const description = 'What is the result of the expression?';
-const makeGame = () => {
+const makeRound = () => {
   const number1 = generateRandomInt(1, 10);
   const number2 = generateRandomInt(1, 10);
   const operator = getRandomElement(['+', '-', '*']);
@@ -26,4 +26,4 @@ const makeGame = () => {
   return { correctAnswer, question };
 };
 
-export default { description, makeGame };
+export default { description, makeRound };
